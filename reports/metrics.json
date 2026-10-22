@@ -1,0 +1,127 @@
+{
+  "data": "data/credit_data.csv",
+  "n_train": 20000,
+  "n_test": 5000,
+  "seed": 42,
+  "test_default_rate": 0.0898,
+  "models": {
+    "logistic_regression": {
+      "roc_auc": 0.8481148321987042,
+      "gini": 0.6962296643974084,
+      "ks": 0.5351573530181819,
+      "average_precision": 0.48067424406733944,
+      "brier_score": 0.06185396548716365,
+      "threshold": 0.2055682974169235,
+      "precision": 0.4223826714801444,
+      "recall": 0.5211581291759465,
+      "f1": 0.4666001994017946,
+      "confusion_matrix": [
+        [
+          4231,
+          320
+        ],
+        [
+          215,
+          234
+        ]
+      ],
+      "classification_report": {
+        "Repaid": {
+          "precision": 0.9516419253261359,
+          "recall": 0.92968578334432,
+          "f1-score": 0.9405357341336001,
+          "support": 4551.0
+        },
+        "Defaulted": {
+          "precision": 0.4223826714801444,
+          "recall": 0.5211581291759465,
+          "f1-score": 0.4666001994017946,
+          "support": 449.0
+        },
+        "accuracy": 0.893,
+        "macro avg": {
+          "precision": 0.6870122984031402,
+          "recall": 0.7254219562601332,
+          "f1-score": 0.7035679667676974,
+          "support": 5000.0
+        },
+        "weighted avg": {
+          "precision": 0.9041144443307659,
+          "recall": 0.893,
+          "f1-score": 0.897976323114684,
+          "support": 5000.0
+        }
+      },
+      "cv_auc_mean": 0.8413757278411531,
+      "cv_auc_std": 0.009657376933161932,
+      "permutation_importance": {
+        "credit_score": 0.11364,
+        "num_late_payments": 0.02987,
+        "debt_to_income": 0.01983,
+        "annual_income": 0.01782,
+        "loan_amount": 0.01582,
+        "loan_purpose": 0.00329,
+        "num_open_accounts": 0.00028
+      }
+    },
+    "gradient_boosting": {
+      "roc_auc": 0.8417443191466767,
+      "gini": 0.6834886382933534,
+      "ks": 0.5129311504997311,
+      "average_precision": 0.4628281703347978,
+      "brier_score": 0.06294416844882539,
+      "threshold": 0.2191002498911517,
+      "precision": 0.4389763779527559,
+      "recall": 0.49665924276169265,
+      "f1": 0.4660397074190178,
+      "confusion_matrix": [
+        [
+          4266,
+          285
+        ],
+        [
+          226,
+          223
+        ]
+      ],
+      "classification_report": {
+        "Repaid": {
+          "precision": 0.9496883348174533,
+          "recall": 0.9373764007910349,
+          "f1-score": 0.9434922039146301,
+          "support": 4551.0
+        },
+        "Defaulted": {
+          "precision": 0.4389763779527559,
+          "recall": 0.49665924276169265,
+          "f1-score": 0.4660397074190178,
+          "support": 449.0
+        },
+        "accuracy": 0.8978,
+        "macro avg": {
+          "precision": 0.6943323563851046,
+          "recall": 0.7170178217763638,
+          "f1-score": 0.704765955666824,
+          "support": 5000.0
+        },
+        "weighted avg": {
+          "precision": 0.9038264010910034,
+          "recall": 0.8978,
+          "f1-score": 0.900616969729324,
+          "support": 5000.0
+        }
+      },
+      "cv_auc_mean": 0.8398142020734148,
+      "cv_auc_std": 0.009694115719088639,
+      "permutation_importance": {
+        "credit_score": 0.09608,
+        "num_late_payments": 0.03687,
+        "debt_to_income": 0.02382,
+        "annual_income": 0.019,
+        "loan_amount": 0.01562,
+        "loan_purpose": 0.00139,
+        "num_open_accounts": 0.00065
+      }
+    }
+  }
+}
